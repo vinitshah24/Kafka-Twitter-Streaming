@@ -20,7 +20,7 @@ kafka-topics --zookeeper 127.0.0.1:2181 --topic userTopic --create --partitions 
 kafka-console-consumer --bootstrap-server 127.0.0.1:9092 --topic userTopic --group groupOne
 ```
 
-# Kafka Topics
+## Kafka Topics
 Cannot create topics with higher replication-factor than brokers
 ```powershell
 kafka-topics --zookeeper 127.0.0.1:2181 --topic my_topic --create --partitions 3 --replication-factor 1

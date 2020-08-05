@@ -20,16 +20,17 @@ public class TwitterClient {
 
     public static void main(String[] args) {
 
-        String consumerKey = PropertiesLoader.getProperty("twitterConsumerKey");
-        String consumerSecret = PropertiesLoader.getProperty("twitterConsumerSecret");
-        String accessToken = PropertiesLoader.getProperty("twitterAccessToken");
-        String accessSecret = PropertiesLoader.getProperty("twitterAccessSecret");
+        String TWITTER_CONSUMER_KEY = PropertiesLoader.getProperty("TwitterConsumerKey");
+        String TWITTER_CONSUMER_SECRET = PropertiesLoader.getProperty("TwitterConsumerSecret");
+        String TWITTER_ACCESS_TOKEN = PropertiesLoader.getProperty("TwitterAccessToken");
+        String TWITTER_ACCESS_SECRET = PropertiesLoader.getProperty("TwitterAccessSecret");
 
-        List<String> searchList = Lists.newArrayList("Music", "America", "UK");
+        List<String> SEARCH_LIST = Lists.newArrayList("Music", "America", "UK");
         BlockingQueue<String> queue = new LinkedBlockingQueue<>(1000);
 
         // Create Twitter Client
-        Client client = TwitterClient.create(consumerKey, consumerSecret, accessToken, accessSecret, searchList, queue);
+        Client client = TwitterClient.create(TWITTER_CONSUMER_KEY, TWITTER_CONSUMER_SECRET,
+                TWITTER_ACCESS_TOKEN, TWITTER_ACCESS_SECRET, SEARCH_LIST, queue);
         client.connect();
 
         // Display Messages

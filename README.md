@@ -1,7 +1,7 @@
 # Kafka Twitter Streaming App
 
-* Kafka Producer to stream the live tweets and feeding it into the Kafka cluster.
-* Kafka Consumer to consume the data and feed it into the ElasticSearch database.
+* Kafka Producer to stream the live tweets and feed it into the Kafka cluster.
+* Kafka Consumer to consume the data from Kafka and store it into the ElasticSearch database.
 
 ## Instructions
 
